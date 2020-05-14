@@ -1,0 +1,78 @@
+header{
+    .navbar-menu{
+        height: 65px;
+        z-index: 99;
+        width: 100%;
+        opacity: 1;
+        top: 0;
+    }
+    .navbar-brand{
+        font-weight: 800;
+        font-size: 30px;
+        color: #777777;
+        padding: 10px 0 0 0;
+        height: 65px;
+        line-height: 40px;
+        transition: 1s;
+        @include media-breakpoint-down(sm){
+            font-size: 20px;
+            padding-top: 6px !important;
+        }
+        &:hover{
+            color: $theme-color;
+            transition: 1s;
+        }
+    }
+    .navbar-collapse{
+        @include media-breakpoint-down(sm){
+            background-color: $white;
+            ul{
+                li{
+                    a{
+                        height: auto !important;
+                        line-height: normal !important;
+                        margin: 16px 20px;
+                        padding: 0px !important;
+                        &.active{
+                            background-color: transparent !important;
+                            color: #333333 !important;
+                        }
+                        &:hover{
+                            background-color: transparent !important;
+                            color: #333333 !important;
+                        }
+                    }
+                }
+            }
+        }    
+        ul{
+            li{
+                a{
+                    font-size: 14px;
+                    color: #333333;
+                    font-weight: 700;
+                    height: 65px;
+                    line-height: 38px;
+                    -webkit-transition: all 0.3s ease;
+                    transition: all 0.3s ease;
+                    display: inline-block;
+                    padding: 15px 20px;
+                    margin-right: 10px;
+                    transition: all 0.3s ease-in-out;
+                    @include media-breakpoint-down(md){
+                        font-size: 11px;
+                    }
+                    &.active{
+                        background-color: $theme-color;
+                        color: $white;
+                    }
+                    &:hover{
+                        background-color: $theme-color;
+                        color: $white;
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+}
